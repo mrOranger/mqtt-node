@@ -7,7 +7,7 @@ class Connector {
             'host': 'localhost',
             'user': 'admin',
             'password': 'admin',
-            'databse': 'iot_database'
+            'database': 'iot_database'
         }
 
         this.database = mysql.createConnection(this.databaseConfig);
@@ -25,7 +25,8 @@ class Connector {
             console.log("Query: " + query);
             if (error) {
                 response.statusCode = 500;
-                return response.end('Error in the Database connection!');
+                response.end('Error in the Database connection!');
+                throw error;
             } else {
                 console.log("Results: " + results);
                 return response.end(results);
