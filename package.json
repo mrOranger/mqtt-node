@@ -22,5 +22,10 @@
     "url": "https://github.com/mrOranger/mqtt-node/issues"
   },
   "homepage": "https://github.com/mrOranger/mqtt-node#readme",
-  "dependencies": {}
+  "dependencies": {
+    "aedes": "^0.44.2",
+    "express": "^4.17.1",
+    "mqtt": "^4.2.6",
+    "mysql": "^2.18.1"
+  }
 }
