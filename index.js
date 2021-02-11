@@ -18,7 +18,7 @@ app.get('/names?:id', function (request, response) {
     console.log("Url: " + requestUrl);
     console.log("HTTP version: " + httpVersion);
     const deviceId = request.query.id;
-    databaseConnector.getPharaohName("SELECT * FROM codes WHERE DeviceID = '" + deviceId + "';", request, response);
+    databaseConnector.getBoxCode("SELECT * FROM codes WHERE DeviceID = '" + deviceId + "';", request, response);
 });
 
 app.listen(PORT, function () {

@@ -4,10 +4,10 @@ class Connector {
 
     constructor() {
         this.databaseConfig = {
-            'host': 'localhost',
-            'user': 'admin',
-            'password': 'admin',
-            'database': 'admin'
+            'host': 'your-host',
+            'user': 'your-user',
+            'password': 'your-password',
+            'database': 'your-database'
         }
 
         this.database = mysql.createConnection(this.databaseConfig);
@@ -20,7 +20,7 @@ class Connector {
         });
     }
 
-    getPharaohName(query, request, response) {
+    getBoxCode(query, request, response) {
         this.database.query(query, function (error, results) {
             if (error) {
                 response.statusCode = 500;
