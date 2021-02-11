@@ -4,10 +4,10 @@ class Connector {
 
     constructor() {
         this.databaseConfig = {
-            'host': 'your-host',
-            'user': 'your-user',
-            'password': 'your-password',
-            'database': 'your-database'
+            'host': 'localhost',
+            'user': 'admin',
+            'password': 'admin',
+            'database': 'admin'
         }
 
         this.database = mysql.createConnection(this.databaseConfig);
@@ -32,7 +32,7 @@ class Connector {
                 }
                 return response.json({
                     'DeviceID': results[0].DeviceID,
-                    'Name': results[0].PharaohName
+                    'Code': results[0].BoxCode
                 });
             }
         });
